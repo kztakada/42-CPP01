@@ -3,7 +3,7 @@ NAME			=	unnecessaryViolence
 CXX				=	c++
 CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-SRCS			=	$(wildcard *.cpp)
+SRCS			=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS_PATH		=	objs/
 OBJS			=	$(SRCS:%.cpp=objs/%.o)
