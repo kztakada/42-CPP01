@@ -3,7 +3,7 @@ NAME			=	braiiiiiiinnnzzzZ
 CXX				=	c++
 CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-SRCS			=	$(wildcard *.cpp)
+SRCS			=	main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
 
 OBJS_PATH		=	objs/
 OBJS			=	$(SRCS:%.cpp=objs/%.o)
