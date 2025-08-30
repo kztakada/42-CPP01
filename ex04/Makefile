@@ -3,7 +3,7 @@ NAME			=	sedIsForLosers
 CXX				=	c++
 CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
-SRCS			=	$(wildcard *.cpp)
+SRCS			=	main.cpp FileError.cpp FileManipulator.cpp StringWrapper.cpp Display.cpp
 
 OBJS_PATH		=	objs/
 OBJS			=	$(SRCS:%.cpp=objs/%.o)
