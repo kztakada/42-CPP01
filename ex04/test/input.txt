@@ -1,0 +1,6 @@
+make test FILE=test/input.txt FROM=h TO=q
+hello world
+hello everyone hello hell
+
+
+goodbye hello

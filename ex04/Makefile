@@ -37,7 +37,7 @@ TO ?=
 
 test:
 	@rm -f $(FILE).replace $(FILE).sed_replace /tmp/diff_result
-	-./$(NAME) $(FILE) $(FROM) $(TO)
+	-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME) $(FILE) $(FROM) $(TO)
 	@test -f $(FILE).replace || (echo "The program did not create the file. If args are incorrect, this test case is OK." >&2 && exit 1)
 	sed 's/$(FROM)/$(TO)/g' $(FILE) > $(FILE).sed_replace
 	diff -u $(FILE).sed_replace $(FILE).replace > /tmp/diff_result 2>&1 && echo "OK" || (echo "FAILED:" && cat /tmp/diff_result)
